@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+Small project to get cubing rates since rates for RED and BLACK cubes are finally released to the public.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Page can be found on https://pladz.github.io/cube_calc/
 
-## Available Scripts
+Assumptions:
 
-In the project directory, you can run:
+1. Equality cubes assume that all 3 lines use the same rates as the first red cube lines
+2. Hexa cubes assume that
+   a) 1st line uses same rates as first red cube line
+   b) 2nd line uses same rates as second red cube line
+   c) 3rd-6th lines use same rates as third red cube line
 
-### `npm start`
+All rates in this simulation are taken from KMS rates
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Update 17/5/21,
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Fixed three line boss appearing, added multiple stats to select for
 
-### `npm test`
+As of 15/5/21,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This simulation can:
 
-### `npm run build`
+1. Give you the percentage chance to roll above a certain value for any given stat (Fill in Type and >=X%)
+   a) Type is the stat you want to roll
+   b) >=X% is a number where you want to roll equal to or above that stat (generally 21%/27% and so on...)
+   c) Works for WSE as well, Boss Dmg, IED, etc.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Give you the percentage to roll a specific line in that specific order
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+26/7/22
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- NaN bug fixed by https://github.com/hehai123/ (thanks)
 
-### `npm run eject`
+4/12/22
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Removed 30% boss lines from prime lines as per update
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6/7/23
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Fixed hexa cube probability
+- Boss damage, Ignore Enemy Defense (IED), Item drop rate, Chance of ignoring damage, and Chance of being invincible are now limited to a maximum of two occurrences
+- Decent skills and Invincibility time increase options are limited to a single occurrence
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+21/9/23
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Added toggle option to reflect cube lines changes for v225: Def lines removed
