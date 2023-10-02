@@ -1,6 +1,6 @@
 {
   "homepage": "http://pladz.github.io/cube_calc",
-  "name": "cube_sim",
+  "name": "cube_calc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
